@@ -41,9 +41,9 @@ namespace WpfApp3._3
                     double summa = 0;
                     int n = int.Parse(countBox1.Text);
                     double x = double.Parse(countBox2.Text);
-                    for (int i = 1; i <= n; i *= 2)
+                    for (int i = 0; i < n; i++)
                     {
-                    summa += Math.Pow(-1, i - 1) * (Math.Pow(x, i) / Fac(i));
+                    summa += Math.Pow(-1, i) * (Math.Pow(x, i * 2) / Fac(i * 2));
                     }
                     resultBox.Text = $"Сумма {n} рядов = {summa}";
                 
